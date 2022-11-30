@@ -1,6 +1,6 @@
 <?php
 
-namespace ClaudioDekker\LaravelAuthBladebones\Console;
+namespace ClaudioDekker\LaravelAuthBlade\Console;
 
 use ClaudioDekker\LaravelAuth\Console\GenerateCommand as BaseGenerateCommand;
 

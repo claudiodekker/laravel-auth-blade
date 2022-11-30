@@ -1,8 +1,8 @@
 <?php
 
-namespace ClaudioDekker\LaravelAuthBladebones\Tests;
+namespace ClaudioDekker\LaravelAuthBlade\Tests;
 
-use ClaudioDekker\LaravelAuthBladebones\LaravelAuthBladebonesServiceProvider;
+use ClaudioDekker\LaravelAuthBlade\LaravelAuthBladeServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -16,7 +16,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LaravelAuthBladebonesServiceProvider::class,
+            LaravelAuthBladeServiceProvider::class,
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ClaudioDekker\LaravelAuthBladebones\Testing\Partials;
+namespace ClaudioDekker\LaravelAuthBlade\Testing\Partials;
 
 use ClaudioDekker\LaravelAuth\CredentialType;
 use ClaudioDekker\LaravelAuth\LaravelAuth;

@@ -1,16 +1,14 @@
 {
-    "name": "claudiodekker/laravel-auth-bladebones",
-    "description": "Rich (yet bare) authentication scaffolding for any blade-based Laravel application.",
+    "name": "claudiodekker/laravel-auth-blade",
+    "description": "Rich authentication scaffolding for any blade-based Laravel application.",
     "keywords": [
         "laravel",
         "auth",
         "authentication",
         "scaffolding",
-        "blade",
-        "barebones",
-        "template"
+        "blade"
     ],
-    "homepage": "https://github.com/claudiodekker/laravel-auth-bladebones",
+    "homepage": "https://github.com/claudiodekker/laravel-auth-blade",
     "license": "MIT",
     "authors": [
         {
@@ -24,7 +22,7 @@
         "php": "~8.1.0",
         "ext-json": "*",
         "laravel/framework": "^9.0",
-        "claudiodekker/laravel-auth": "~0.1"
+        "claudiodekker/laravel-auth": "^0.1"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
@@ -33,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ClaudioDekker\\LaravelAuthBladebones\\": "src/"
+            "ClaudioDekker\\LaravelAuthBlade\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ClaudioDekker\\LaravelAuthBladebones\\Tests\\": "tests/"
+            "ClaudioDekker\\LaravelAuthBlade\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -47,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ClaudioDekker\\LaravelAuthBladebones\\LaravelAuthBladebonesServiceProvider"
+                "ClaudioDekker\\LaravelAuthBlade\\LaravelAuthBladeServiceProvider"
             ]
         }
     },

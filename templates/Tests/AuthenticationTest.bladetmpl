@@ -23,7 +23,7 @@ use ClaudioDekker\LaravelAuth\Testing\SubmitChangePasswordTests;
 use ClaudioDekker\LaravelAuth\Testing\SudoModeChallengeTests;
 use ClaudioDekker\LaravelAuth\Testing\ViewCredentialsOverviewPageTests;
 @if (! $withoutViews)
-use ClaudioDekker\LaravelAuthBladebones\Testing\BladeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\BladeViewTests;
 @endif
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

@@ -1,11 +1,11 @@
 <?php
 
-namespace ClaudioDekker\LaravelAuthBladebones;
+namespace ClaudioDekker\LaravelAuthBlade;
 
-use ClaudioDekker\LaravelAuthBladebones\Console\GenerateCommand;
+use ClaudioDekker\LaravelAuthBlade\Console\GenerateCommand;
 use Illuminate\Support\ServiceProvider;
 
-class LaravelAuthBladebonesServiceProvider extends ServiceProvider
+class LaravelAuthBladeServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.

@@ -1,16 +1,16 @@
 <?php
 
-namespace ClaudioDekker\LaravelAuthBladebones\Testing;
+namespace ClaudioDekker\LaravelAuthBlade\Testing;
 
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\AccountRecoveryChallengeViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\AccountRecoveryRequestViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\CredentialsOverviewViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\LoginViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\MultiFactorChallengeViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\RegisterPublicKeyCredentialViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\RegisterTotpCredentialViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\RegisterViewTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\Partials\SudoModeChallengeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\AccountRecoveryChallengeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\AccountRecoveryRequestViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\CredentialsOverviewViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\LoginViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\MultiFactorChallengeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\RegisterPublicKeyCredentialViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\RegisterTotpCredentialViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\RegisterViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\Partials\SudoModeChallengeViewTests;
 
 trait BladeViewTests
 {

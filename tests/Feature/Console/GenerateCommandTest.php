@@ -1,9 +1,9 @@
 <?php
 
-namespace ClaudioDekker\LaravelAuthBladebones\Tests\Feature\Console;
+namespace ClaudioDekker\LaravelAuthBlade\Tests\Feature\Console;
 
-use ClaudioDekker\LaravelAuthBladebones\Console\GenerateCommand;
-use ClaudioDekker\LaravelAuthBladebones\Tests\TestCase;
+use ClaudioDekker\LaravelAuthBlade\Console\GenerateCommand;
+use ClaudioDekker\LaravelAuthBlade\Tests\TestCase;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Mockery;
@@ -88,7 +88,7 @@ use ClaudioDekker\LaravelAuth\Testing\RemoveCredentialTests;
 use ClaudioDekker\LaravelAuth\Testing\SubmitChangePasswordTests;
 use ClaudioDekker\LaravelAuth\Testing\SudoModeChallengeTests;
 use ClaudioDekker\LaravelAuth\Testing\ViewCredentialsOverviewPageTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\BladeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\BladeViewTests;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -357,7 +357,7 @@ use ClaudioDekker\LaravelAuth\Testing\RemoveCredentialTests;
 use ClaudioDekker\LaravelAuth\Testing\SubmitChangePasswordTests;
 use ClaudioDekker\LaravelAuth\Testing\SudoModeChallengeTests;
 use ClaudioDekker\LaravelAuth\Testing\ViewCredentialsOverviewPageTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\BladeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\BladeViewTests;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -614,7 +614,7 @@ use ClaudioDekker\LaravelAuth\Testing\RemoveCredentialTests;
 use ClaudioDekker\LaravelAuth\Testing\SubmitChangePasswordTests;
 use ClaudioDekker\LaravelAuth\Testing\SudoModeChallengeTests;
 use ClaudioDekker\LaravelAuth\Testing\ViewCredentialsOverviewPageTests;
-use ClaudioDekker\LaravelAuthBladebones\Testing\BladeViewTests;
+use ClaudioDekker\LaravelAuthBlade\Testing\BladeViewTests;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

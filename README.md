@@ -1,12 +1,12 @@
-# Laravel Auth (for Blade; barebones edition)
+# Laravel Auth (for Blade)
 Rich authentication scaffolding for any blade-based Laravel application.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/claudiodekker/laravel-auth-bladebones.svg?style=flat-square)](https://packagist.org/packages/claudiodekker/laravel-auth-bladebones)
-[![GitHub App Tests Action Status](https://github.com/claudiodekker/laravel-auth-bladebones/actions/workflows/app-tests.yml/badge.svg)](https://github.com/claudiodekker/laravel-auth-bladebones/actions/workflows/app-tests.yml)
-[![Github Package Tests Action Status](https://github.com/claudiodekker/laravel-auth-bladebones/actions/workflows/package-tests.yml/badge.svg)](https://github.com/claudiodekker/laravel-auth-bladebones/actions/workflows/package-tests.yml)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/claudiodekker/laravel-auth-bladebones/Check%20&%20fix%20styling?label=code%20style)](https://github.com/claudiodekker/laravel-auth-bladebones/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
-[![Code Quality Score](https://img.shields.io/scrutinizer/g/claudiodekker/laravel-auth-bladebones.svg?style=flat-square)](https://scrutinizer-ci.com/g/claudiodekker/laravel-auth-bladebones)
-[![Total Downloads](https://img.shields.io/packagist/dt/claudiodekker/laravel-auth-bladebones.svg?style=flat-square)](https://packagist.org/packages/claudiodekker/laravel-auth-bladebones)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/claudiodekker/laravel-auth-blade.svg?style=flat-square)](https://packagist.org/packages/claudiodekker/laravel-auth-blade)
+[![GitHub App Tests Action Status](https://github.com/claudiodekker/laravel-auth-blade/actions/workflows/app-tests.yml/badge.svg)](https://github.com/claudiodekker/laravel-auth-blade/actions/workflows/app-tests.yml)
+[![Github Package Tests Action Status](https://github.com/claudiodekker/laravel-auth-blade/actions/workflows/package-tests.yml/badge.svg)](https://github.com/claudiodekker/laravel-auth-blade/actions/workflows/package-tests.yml)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/claudiodekker/laravel-auth-blade/Check%20&%20fix%20styling?label=code%20style)](https://github.com/claudiodekker/laravel-auth-blade/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Code Quality Score](https://img.shields.io/scrutinizer/g/claudiodekker/laravel-auth-blade.svg?style=flat-square)](https://scrutinizer-ci.com/g/claudiodekker/laravel-auth-blade)
+[![Total Downloads](https://img.shields.io/packagist/dt/claudiodekker/laravel-auth-blade.svg?style=flat-square)](https://packagist.org/packages/claudiodekker/laravel-auth-blade)
 
 These days, most (web)applications no longer have just a simple username-password login form; they require you to think about password strength, two-factor authentication, 
 the ability to recover your account with all of this set up, and as of more recently even the ability to log in without any password at all, using Passkeys.
@@ -32,7 +32,7 @@ While this might seem somewhat scary, we've also included extensive (and customi
 You can install the package via composer:
 
 ```bash
-composer require claudiodekker/laravel-auth-bladebones
+composer require claudiodekker/laravel-auth-blade
 ```
 
 Once installed, you'll want to generate the authentication scaffolding itself.
