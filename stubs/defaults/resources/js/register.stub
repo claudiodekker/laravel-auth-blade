@@ -1,0 +1,6 @@
+import { createApp } from 'vue'
+import RegisterForm from '@/forms/RegisterForm.vue'
+
+const el = document.querySelector("#register-form");
+
+createApp(RegisterForm, { ...el.dataset }).mount(el)

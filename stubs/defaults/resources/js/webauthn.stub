@@ -1,0 +1,52 @@
+import {
+  supported,
+  get,
+  create,
+  parseRequestOptionsFromJSON,
+  parseCreationOptionsFromJSON
+} from "@github/webauthn-json/browser-ponyfill"
+
+let abortController = null
+
+/**
+ * Determine whether the browser supports WebAuthn's Conditional UI.
+ *
+ * @returns {Promise<boolean>}
+ */
+const isConditionalMediationAvailable = async () => {
+  return supported()
+    && typeof PublicKeyCredential.isConditionalMediationAvailable === 'function'
+    && await PublicKeyCredential.isConditionalMediationAvailable()
+}
+
+/**
+ * Cancels any pending WebAuthn Conditional UI login attempts.
+ *
+ * @returns {void}
+ */
+const cancelConditionalMediation = () => {
+  if (abortController) {
+    abortController.abort()
+    abortController = null
+  }
+}
+
+export default {
+  supported,
+  authenticate: (requestOptions) => get(parseRequestOptionsFromJSON(requestOptions)),
+  register: async (creationOptions) => (await create(parseCreationOptionsFromJSON(creationOptions))).toJSON(),
+  conditionalUI: {
+    supported: async () => supported() && await isConditionalMediationAvailable(),
+    authenticate: async (requestOptions) => {
+      cancelConditionalMediation()
+      abortController = new AbortController()
+
+      return await get({
+        ...parseRequestOptionsFromJSON(requestOptions),
+        signal: abortController.signal,
+        mediation: 'conditional',
+      })
+    },
+    cancel: cancelConditionalMediation
+  },
+}

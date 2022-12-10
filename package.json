@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "eslint --ext .vue stubs/ --fix",
+    "fix:prettier": "prettier --write --loglevel warn 'stubs/**/*.vue'"
+  },
+  "dependencies": {
+    "eslint": "^8.29.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "^2.8.1"
+  }
+}

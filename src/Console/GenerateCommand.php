@@ -52,6 +52,8 @@ class GenerateCommand extends BaseGenerateCommand
      */
     protected function installViews(): void
     {
+        $this->installLayouts();
+        $this->installComponents();
         $this->installJs();
 
         $this->copy('views/auth/challenges/multi_factor.blade.stub', resource_path('views/auth/challenges/multi_factor.blade.php'));
@@ -72,6 +74,36 @@ class GenerateCommand extends BaseGenerateCommand
     }
 
     /**
+     * Install the blade layouts used by the package's authentication views.
+     *
+     * @return void
+     */
+    protected function installLayouts(): void
+    {
+        $this->copy('views/layouts/guest.blade.stub', resource_path('views/layouts/guest.blade.php'));
+    }
+
+    /**
+     * Install the blade components used by the package's authentication views.
+     *
+     * @return void
+     */
+    protected function installComponents(): void
+    {
+        // Vue Components (JS Forms)
+        $this->copy('resources/js/components/icons/KeyIcon.vue', resource_path('js/components/icons/KeyIcon.vue'));
+        $this->copy('resources/js/components/icons/PasswordIcon.vue', resource_path('js/components/icons/PasswordIcon.vue'));
+        $this->copy('resources/js/components/ButtonComponent.vue', resource_path('js/components/ButtonComponent.vue'));
+        $this->copy('resources/js/components/InputComponent.vue', resource_path('js/components/InputComponent.vue'));
+        $this->copy('resources/js/components/InputErrorComponent.vue', resource_path('js/components/InputErrorComponent.vue'));
+        $this->copy('resources/js/components/LoadingIndicatorComponent.vue', resource_path('js/components/LoadingIndicatorComponent.vue'));
+
+        // Blade Components (Layouts)
+        $this->copy('views/components/icons/users.blade.stub', resource_path('views/components/icons/users.blade.php'));
+        $this->copy('views/components/anchor.blade.stub', resource_path('views/components/anchor.blade.php'));
+    }
+
+    /**
      * Installs the package's javascript files.
      *
      * @return void
@@ -80,7 +112,12 @@ class GenerateCommand extends BaseGenerateCommand
     {
         $this->copy('vite.config.stub', base_path('vite.config.js'));
 
-        $this->exec('npm install -D vue@next @vitejs/plugin-vue');
+        $this->copy('resources/js/register.stub', resource_path('js/register.js'));
+        $this->copy('resources/js/webauthn.stub', resource_path('js/webauthn.js'));
+
+        $this->copy('resources/js/forms/RegisterForm.vue', resource_path('js/forms/RegisterForm.vue'));
+
+        $this->exec('npm install -D @github/webauthn-json vue@next @vitejs/plugin-vue');
     }
 
     /**
@@ -95,7 +132,7 @@ class GenerateCommand extends BaseGenerateCommand
 
         $this->copy('resources/css/app.stub', resource_path('css/app.css'));
 
-        $this->exec("npm install -D tailwindcss postcss autoprefixer @tailwindcss/forms");
+        $this->exec('npm install -D tailwindcss postcss autoprefixer @tailwindcss/forms');
     }
 
     /**
@@ -105,6 +142,6 @@ class GenerateCommand extends BaseGenerateCommand
      */
     protected function compileAssets(): void
     {
-        $this->exec("npm run build");
+        $this->exec('npm run build');
     }
 }

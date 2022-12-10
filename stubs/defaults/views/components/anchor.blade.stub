@@ -1,0 +1,1 @@
+<a {{ $attributes->class("underline text-sm text-gray-600 hover:text-gray-800 focus:text-gray-900") }}>{{ $slot }}</a>
